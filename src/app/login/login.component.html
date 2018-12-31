@@ -1,0 +1,30 @@
+
+<div class ="row col-md-12" style="top-padding: 20px">
+   <div class = "col-md-6">
+    <label style="float :right"><b>Login Id</b></label>
+  </div>
+  <div class = "col-md-6">
+    <input type="textbox" [(ngModel)]="loginId" name="loginId" />
+  </div>
+  
+  <div class= "col-md-6">
+    <label style="float :right"><b>Password</b></label>
+  </div>
+  <div class= "col-md-6">
+    <input type="password" [(ngModel)]= "pwd" name="pwd"/>
+  </div>
+
+  <div class= "col-md-6">
+    <label style="float :right"><b>Role</b></label>
+  </div>
+  <div class= "col-md-6">
+    <input type="textbox" [(ngModel)]= "role" name="role"/>
+  </div>
+  
+  <div *ngIf="wrongCredential == true">
+    {{"username or password are incorrect"}}
+  </div>
+  <div class= "col-md-7">
+    <button (click)="onLogin()" style="float : right">Login</button>
+  </div> 
+</div>
